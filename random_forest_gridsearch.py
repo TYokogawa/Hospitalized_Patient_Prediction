@@ -62,7 +62,7 @@ param_grid = {"max_depth": [3, None],
 
 
 ##### run grid search
-grid_search = GridSearchCV(clf, param_grid=param_grid)
+grid_search = GridSearchCV(model, param_grid=param_grid)
 start = time()
 grid_search.fit(X, y)
 
