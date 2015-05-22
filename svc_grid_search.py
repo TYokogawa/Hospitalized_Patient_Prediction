@@ -1,10 +1,11 @@
+# This grid search takes long time compared to other model
 #y_train = training set output
 #y_test  = validation set output
 #y_rtest = testing set output
 
 from sklearn.svm import SVC
 from sklearn import svm, grid_search
-parameters = {'kernel':('linear', 'rbf'), 'C':[0.1, 1, 10, 100]}
+parameters = {'kernel':('linear', 'rbf'), 'C':[0.1, 1, 10, 100]}    // C define regularization
 svr = svm.SVC()
 model = grid_search.GridSearchCV(svr, parameters)
 model.fit(X_train, y_train)
